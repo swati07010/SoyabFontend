@@ -1,0 +1,7 @@
+.footer {
+  border-top: 1px solid #444;
+}
+
+.footer a:hover {
+  color: #0dcaf0; /* Bootstrap's info color */
+}

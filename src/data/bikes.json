@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "E-Scooter",
+    "type": "commuter",
+    "pricePerHour": 10,
+    "available": 5,
+    "image": "/assets/b1.png"
+  },
+  {
+    "id": 2,
+    "name": "E-Cruiser",
+    "type": "cruiser",
+    "pricePerHour": 15,
+    "available": 3,
+    "image": "/assets/b2.png"
+  },
+  {
+    "id": 3,
+    "name": "E-Cruiser",
+    "type": "cruiser",
+    "pricePerHour": 15,
+    "available": 3,
+    "image": "/assets/b3.png"
+  },
+  {
+    "id": 4,
+    "name": "E-Cruiser",
+    "type": "cruiser",
+    "pricePerHour": 15,
+    "available": 3,
+    "image": "/assets/b22.png"
+  },
+
+  {
+    "id": 5,
+    "name": "E-Cruiser",
+    "type": "cruiser",
+    "pricePerHour": 15,
+    "available": 3,
+    "image": "/assets/bb1.png"
+  },
+
+  {
+    "id": 6,
+    "name": "E-Cruiser",
+    "type": "cruiser",
+    "pricePerHour": 15,
+    "available": 3,
+    "image": "/assets/bb1.png"
+  }
+]

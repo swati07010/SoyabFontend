@@ -1,0 +1,80 @@
+.header {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.company-name {
+  font-size: 20px;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.documents-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.documents-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info {
+  font-size: 16px;
+}
+.nav-links{
+  display: flex;
+  gap: 35px;
+  align-items: center;}
+
+  .nav-link-item {
+  display: flex;
+  align-items: center;
+}
+
+.logout-button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+
+.logout-button:hover {
+  background: darkred;
+}

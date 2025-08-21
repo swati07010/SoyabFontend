@@ -1,0 +1,16 @@
+/* src/pages/Home.css */
+
+.home-hero {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.card-img-top {
+  border-bottom: 1px solid #ddd;
+}
+
+.card h5 {
+  font-weight: 600;
+}

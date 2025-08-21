@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "John",
+    "role": "user",
+    "balance": 100,
+    "bookings": []
+  },
+  {
+    "id": 2,
+    "name": "Admin",
+    "role": "admin",
+    "balance": 0,
+    "bookings": []
+  }
+]

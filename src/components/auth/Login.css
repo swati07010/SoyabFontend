@@ -1,0 +1,79 @@
+/* Centering the form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  font-family: Arial, sans-serif;
+}
+
+/* Card style */
+.login-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 1.5rem;
+}
+
+/* Input styles */
+label {
+  display: block;
+  text-align: left;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border: 1px solid #2575fc;
+}
+
+/* Button styles */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1a5edb;
+}
+
+/* Error/Success message */
+.message {
+  margin-top: 1rem;
+  color: red;
+  font-weight: bold;
+}

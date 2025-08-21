@@ -1,0 +1,124 @@
+.editprofile-wrapper {
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+.editprofile-header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.editprofile-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.editprofile-back {
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.editprofile-back i {
+  font-size: 25px;
+}
+
+/* Profile Image */
+.editprofile-profile-img {
+  position: relative;
+  width: 20%;
+  margin: 20px auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.editprofile-profile-img img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.editprofile-file {
+  position: absolute;
+  top:-25px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* background: var(--main-clr, #009C00); */
+ background-color:#009C00;
+  color: #009C00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.editprocamera{
+     height: 40px;
+     width: 30px;
+     color: #fff;
+    top:-7px;
+    margin-top: auto;
+    position: relative;
+     
+}
+/* Input Fields */
+.editprofile-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+  padding: 10px 15px;
+  border-radius: 100vw;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.editprofile-field i {
+  font-size: 20px;
+  color: #474747;
+}
+
+.editprofile-field input {
+  flex-grow: 1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* Button */
+.editprofile-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--main-clr, #009C00);
+  border: none;
+  outline: none;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.editprofile-btn:hover {
+  background: #007B00; /* Darker green on hover */
+}

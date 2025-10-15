@@ -1,0 +1,103 @@
+.wallet-wrapper {
+  padding: 20px;
+  background: #f7f8fa;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.wallet-header{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px 15px;
+}
+
+
+
+.wallet-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+.wallet-left {
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: solid 1px black;
+  color: black;
+  border-radius: 5px;
+  padding: 2px;
+  width: 30px;
+  text-align: center;
+}
+
+
+.wallet-title{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.wallet-grid {
+  margin-top: 20px;
+}
+
+.wallet-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.wallet-first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wallet-total-amount {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.wallet-withdraw-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wallet-withdraw-container button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: var(--main-clr, #007bff);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.wallet-withdraw-container button:hover {
+  opacity: 0.9;
+}
+
+.wallet-withdraw-options {
+  display: flex;
+  gap: 10px;
+}
+
+.wallet-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wallet-inputs input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

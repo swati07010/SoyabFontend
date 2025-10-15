@@ -1,0 +1,87 @@
+.booking-history-wrapper {
+  padding: 20px;
+  background: #f7f8fa;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.booking-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px 15px;
+  background: #fff;
+
+}
+
+.booking-history-title {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
+  text-wrap: nowrap; */
+
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+.booking-history-left {
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: solid 1px black;
+  color: black;
+  border-radius: 5px;
+  padding: 2px;
+  width: 30px;
+  text-align: center;
+}
+
+
+.booking-history-box {
+  padding: 20px;
+  box-shadow: 0px 8px 28px 0px #00000040;
+  background: #99FF99;
+  border-radius: 20px;
+}
+
+.booking-history-vehicleimg {
+  width: 70px;
+  height: 40px;
+  object-fit: contain;
+  margin-left: -8px;
+}
+
+.booking-history-vehicle-name {
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.booking-history-total-amount {
+  font-family: Poppins;
+  font-size: 10.84px;
+  font-weight: 500;
+}
+
+.booking-history-picup-location p {
+  font-family: Poppins;
+  font-size: 10.84px;
+  font-weight: 500;
+}
+
+.booking-history-price {
+  font-family: Poppins;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.booking-history-Pickup-date {
+  font-family: Poppins;
+  font-size: 10.8px;
+  font-weight: 500;
+}

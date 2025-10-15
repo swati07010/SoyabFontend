@@ -32,9 +32,8 @@ const EditProfile = () => {
     const fetchProfile = async () => {
       dispatch(fetchProfileStart());
       try {
-        const token = localStorage.getItem("token");
         const { data } = await axios.get("http://localhost:5000/edit-profile", {
-          headers: { Authorization: `Bearer ${token}` },
+          withCredentials: true, // ✅ send cookies
         });
         dispatch(fetchProfileSuccess(data.data));
       } catch (err) {
@@ -51,12 +50,12 @@ const EditProfile = () => {
   // Populate local state when profile loads
   useEffect(() => {
     if (profile) {
-      setUserName(profile.name || user.name || "");
+      setUserName(profile.name || user?.name || "");
       setUserEmail(profile.email || "");
       setUserPhone(profile.mobile || "");
       setProfileImg(profile.profileImage || "");
     }
-  }, [profile]);
+  }, [profile, user]);
 
   const isMobileChanged = userPhone !== profile?.mobile;
 
@@ -66,40 +65,13 @@ const EditProfile = () => {
     if (file) setProfileImg(URL.createObjectURL(file));
   };
 
-  // const handleImgChange = async (e) => {
-  //   const file = e.target.files[0];
-  //   if (!file) return;
-
-  //   const formData = new FormData();
-  //   formData.append("profileImage", file);
-
-  //   try {
-  //     const token = localStorage.getItem("token");
-  //     const { data } = await axios.post(
-  //       "http://localhost:5000/upload-profile-image",
-  //       formData,
-  //       {
-  //         headers: {
-  //           "Content-Type": "multipart/form-data",
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     );
-  //     setProfileImg(data.imageUrl); // store the URL returned by server
-  //   } catch (err) {
-  //     console.error(err);
-  //     alert("Failed to upload image");
-  //   }
-  // };
-
   // Send OTP
   const handleSendOtp = async () => {
     try {
-      const token = localStorage.getItem("token");
       const res = await axios.post(
         "http://localhost:5000/send-otp",
         { mobile: userPhone },
-        { headers: { Authorization: `Bearer ${token}` } }
+        { withCredentials: true } // ✅ include cookie
       );
       setServerOtp(res.data.otp); // ⚠️ Only for testing
       setOtpSent(true);
@@ -136,11 +108,10 @@ const EditProfile = () => {
 
     dispatch(updateProfileStart());
     try {
-      const token = localStorage.getItem("token");
       const { data } = await axios.put(
         "http://localhost:5000/edit-profile",
         payload,
-        { headers: { Authorization: `Bearer ${token}` } }
+        { withCredentials: true } // ✅ send cookie
       );
       dispatch(updateProfileSuccess(data.data));
       alert("Profile updated successfully!");

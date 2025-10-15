@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Documents.css";
 import axios from "axios";
 
@@ -11,6 +11,27 @@ const Documents = () => {
     licenseOrProof: null,
     address: "",
   });
+
+  const [mobile, setMobile] = useState(null);
+
+  // Fetch user info from backend (cookies will be sent automatically with `withCredentials: true`)
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     try {
+  //       const response = await axios.get("http://localhost:5000/me", {
+  //         withCredentials: true, // important for cookies
+  //       });
+  //       setMobile(response.data.mobile);
+  //     } catch (error) {
+  //       console.error(
+  //         "Failed to fetch user:",
+  //         error.response?.data || error.message
+  //       );
+  //     }
+  //   };
+
+  //   fetchUser();
+  // }, []);
 
   const handleChange = (e) => {
     const { name, files, value } = e.target;
@@ -28,12 +49,6 @@ const Documents = () => {
     }
   };
 
-  const storedUser = localStorage.getItem("user");
-  const user = storedUser ? JSON.parse(storedUser) : null;
-  const mobile = user ? user.mobile : null;
-
-  // Then in handleSubmit (or wherever you send data):
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -43,7 +58,7 @@ const Documents = () => {
     }
 
     const data = new FormData();
-    data.append("mobile", mobile); // append mobile from localStorage user object
+    data.append("mobile", mobile);
     data.append("address", formData.address);
 
     for (const key in formData) {
@@ -57,9 +72,8 @@ const Documents = () => {
         "http://localhost:5000/upload-documents",
         data,
         {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+          headers: { "Content-Type": "multipart/form-data" },
+          withCredentials: true, // include cookies
         }
       );
 

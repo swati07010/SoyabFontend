@@ -7,7 +7,8 @@ body {
 
 .signup-container {
     background: #fff;
-    max-width: 400px;
+    width: 80%;
+    min-width: 20px;
     margin: 50px auto;
     padding: 25px;
     border-radius: 10px;
@@ -31,6 +32,9 @@ form input, form select, button {
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+.signup-mobile{
+    display: flex;
 }
 
 form .terms {
@@ -99,4 +103,78 @@ form button:disabled {
     color: red;
     font-size: 14px;
     margin-top: 5px;
+}
+
+.signup-terms-row {
+   width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.signup-terms-radio {
+    width: auto;;
+  accent-color: #007bff;
+  margin-right: 6px;
+  gap:2px;
+}
+
+.signup-terms-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.signup-tcpopup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-tcpopup {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.signup-tcpopup-info {
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.signup-accept-btn,
+.signup-close-btn {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 18px;
+  margin: 10px 8px 0 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.signup-close-btn {
+  background: #dc3545;
+}
+
+@media(width: 500px) {
+    
+    .signup-mobile{
+        display: grid;
+        grid-column: 1fr 1fr;
+    }
+    
 }

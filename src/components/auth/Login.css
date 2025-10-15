@@ -3,8 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  min-height: 100vh; /* full height */
+  padding: 1rem; /* spacing on small screens */
   font-family: Arial, sans-serif;
 }
 
@@ -14,7 +14,8 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-  width: 350px;
+  width: 100%;
+  max-width: 400px; /* limit width for larger screens */
   text-align: center;
 }
 
@@ -76,4 +77,79 @@ button:hover {
   margin-top: 1rem;
   color: red;
   font-weight: bold;
+}
+
+.forgotpassword {
+  margin-top: 10px;
+  cursor: pointer;
+  color: blue;
+}
+
+/* Image inside card */
+.evimg {
+  width: 120px;
+  max-width: 40%;
+  margin-bottom: 1rem;
+}
+
+/* 🔹 Responsive styles */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  input,
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/* Tablets (portrait & landscape, up to ~768px) */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  input,
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .evimg {
+    width: 100px;
+  }
+}
+
+/* Mobile phones (up to ~480px) */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  input,
+  button {
+    font-size: 0.85rem;
+    padding: 7px;
+  }
+
+  .evimg {
+    width: 80px;
+  }
 }
